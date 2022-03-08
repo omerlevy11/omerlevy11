@@ -1,0 +1,105 @@
+.resume-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    width: 90rem;
+    height: 30rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    color: white;
+    }
+    
+    .resume-container:before {
+        
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+    }
+
+    .resume-headline{
+        align-self: baseline;
+        width:100%;
+        height:10%;
+        margin-left: 3%;
+    }
+    .resume-content{
+        width:100%;
+        height:90%;
+        margin-left: 3%;
+        margin-top: 5%;
+
+    }
+
+    .step {
+        position: relative;
+        min-height: 1em;
+        color: gray;
+      }
+      .title {
+        line-height: 1.5em;
+        font-weight: bold;
+      }
+      .caption {
+        font-size: 0.8em;
+      }
+      .step + .step {
+        margin-top: 1.5em
+      }
+
+      .step > div:first-child {
+        position: static;
+        height: 0;
+      }
+      .step > div:not(:first-child) {
+        margin-left: 1.5em;
+        padding-left: 1em;
+      }
+      .circle {
+        background: gray;
+        position: relative;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        border-radius: 100%;
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 0 0 3px #fff;
+      }
+
+      .circle:after {
+        content: ' ';
+        position: absolute;
+        display: block;
+        top: 1px;
+        right: 50%;
+        bottom: 1px;
+        left: 50%;
+        height: 100%;
+        width: 1px;
+        transform: scale(1, 2);
+        transform-origin: 50% -100%;
+        background-color: rgba(255, 255, 255, 0.25);
+        z-index: -1;
+      }
+      .step:last-child .circle:after {
+        display: none
+      }
+      .step.step-active {
+        color: #4285f4
+      }
+      .step.step-active .circle {
+        background-color: #4285f4;
+      }
